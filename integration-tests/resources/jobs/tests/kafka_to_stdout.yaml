@@ -1,0 +1,9 @@
+input:
+  uses: kafka.read
+  with:
+    bootstrap_servers: kafka
+    topic: integration-tests
+    group: integration-tests
+    snapshot: true
+steps:
+  - uses: std.write

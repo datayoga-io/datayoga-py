@@ -1,0 +1,26 @@
+{
+  "title": "Kafka",
+  "description": "Schema for configuring Kafka connection parameters",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Connection type",
+      "type": "string",
+      "const": "kafka"
+    },
+    "bootstrap_servers": {
+      "description": "Kafka Hosts List comma separated",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["type", "bootstrap_servers"],
+  "examples": [
+    {
+      "kafka": {
+        "type": "kafka",
+        "bootstrap_servers": ["localhost:9092,localhost:9093"]
+      }
+    }
+  ]
+}

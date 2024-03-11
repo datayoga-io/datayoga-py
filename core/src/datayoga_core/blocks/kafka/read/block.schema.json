@@ -1,0 +1,30 @@
+{
+  "title": "kafka.read",
+  "description": "Read from the kafka consumer",
+  "type": "object",
+  "properties": {
+    "bootstrap_servers": {
+      "description": "host name",
+      "type": "string"
+    },
+    "topic": {
+      "description": "Kafka topic",
+      "type": "string"
+    },
+    "group": {
+      "description": "Kafka group",
+      "type": "string"
+    },
+    "seek_to_beginning": {
+      "description": "Consumer seek to beginning",
+      "type": "boolean"
+    },
+    "snapshot": {
+      "type": "boolean",
+      "title": "Snapshot current entries and quit",
+      "description": "Snapshot current entries and quit",
+      "default": false
+    }
+  },
+  "required": ["bootstrap_servers", "topic"]
+}
